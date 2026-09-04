@@ -1,159 +1,94 @@
-<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'>
-<title>AgriConvergenceAi — briefing (DRAFT)</title>
-<link rel='stylesheet' href='styles.css'></head><body>
-<div class='wrap'><header><a class='brand' href='index.html'><strong>AgriConvergenceAi</strong></a>
-<nav><a href='index.html'>Home</a><a href='dashboard.html'>Desk</a></nav></header>
-<article class='prose'><p class='draft'>DRAFT — not for sale until facts are approved. 
-Not financial, legal, or investment advice.</p>
-<h1>How to read this guide</h1>
-<p><b>DRAFT.</b> AgriConvergenceAi / Andessa Legacy Holdings LLC.</p>
-<p>This is a short briefing for operators, farm-tech staff, and curious investors. It explains <b>mechanisms</b>. It does not tell you to buy, sell, or originate anything.</p>
-<ul><li>Every chapter can stand alone. Read 1 then 6 if you are in a hurry.</li><li>When a number would have to be invented, it is omitted. Look up USDA, FAO, or your land-grant extension for current figures.</li><li>“Token,” “ledger,” and “coin” are not synonyms. Chapter 2 is the map.</li><li>Nothing here is legal, tax, insurance, or investment advice.</li><li>Seller: Andessa Legacy Holdings LLC, 30 N Gould St Ste N, Sheridan, WY 82801. info@andessalegacyholdings.com. (307) 410-3780.</li></ul>
-<hr>
-<h1>Chapter 1 — Traceability and supply-chain provenance</h1>
-<p><b>DRAFT for Mike review. Do not publish or sell until facts are approved.</b>   Not financial, legal, or investment advice.</p>
-<p>---</p>
-<p>A grain buyer, a produce importer, and a pet-food brand are usually asking the same question: <i>what is this, from where, and what happened to it after it left the field?</i></p>
-<p>Traceability is the system that answers that. It is older than blockchain. Railroad waybills, USDA lot stamps, GS1 barcodes, and mill intake tickets are already “chains of record.” What changed is the <b>cost of asking</b> and the <b>number of parties who must see the same answer at the same time</b>.</p>
-<h2>1. What a digital trail actually is</h2>
-<p>A useful trail has four pieces:</p>
-<p>1. <b>Identity of the lot</b> — not “wheat,” but a specific quantity with a code (lot, batch, SSCC, or farm-field ID). 2. <b>Events</b> — planted, sprayed, harvested, stored, blended, shipped, received, tested. 3. <b>Who attested</b> — the elevator, the lab, the trucker, the mill. 4. <b>A place later parties can look it up</b> — a database, a portal, or a shared ledger.</p>
-<p>If any of those four is missing, you have a story, not a trail. Blockchain does not create the identity or the event. It is one way to store the lookup so that two companies who do not trust each other’s spreadsheets can still agree on the timestamp.</p>
-<h2>2. Why agriculture is hard</h2>
-<p>A silo is not a sealed bottle of pills. Grain is <b>commingled</b>. One truck becomes part of a bin; that bin is blended to a grade; that grade is loaded on a barge. The digital object (“this lot”) has to survive blending, or the trail stops at the pit.</p>
-<p>Produce and livestock have the opposite problem: many small lots, short shelf life, and a recall window measured in hours. The GS1 family of standards (GTIN, GLN, EPCIS event data) exists because retailers already needed a common language. Newer “farm to fork” pilots usually <b>wrap those standards</b>, they do not replace them.</p>
-<p>Treat any vendor slide that says “we put the farm on-chain” as a question: <i>which event, which lot, which attester, and what happens at the elevator when two lots become one?</i></p>
-<h2>3. What AI is doing here (and what it is not)</h2>
-<p>AI shows up in traceability as:</p>
-<ul><li><b>Document capture</b> — reading scale tickets and bills of lading so a human is not retyping them.</li><li><b>Anomaly flags</b> — a truck that could not have made that trip in that time; a moisture reading that does not match the weather station.</li><li><b>Matching</b> — linking a retail SKU back to candidate lots when the paper trail is messy.</li></ul>
-<p>It does <b>not</b> magically know which acre a commingled bushel came from if nobody recorded the intake. Garbage in, confident garbage out. This guide will not quote a model’s accuracy as a promise.</p>
-<h2>4. Where a ledger helps, where it does not</h2>
-<p>A shared ledger is useful when:</p>
-<ul><li>Several firms must see the <b>same</b> event log,</li><li>Someone might later dispute “we never received that,”</li><li>A regulator or a buyer wants an audit trail that is hard to quietly edit.</li></ul>
-<p>It is not useful when:</p>
-<ul><li>The farm still records events in a paper book and never uploads them,</li><li>The commercial fight is about <b>grade and weight</b>, which still need a lab and a scale,</li><li>The product is a public token with a price chart. That is a different object from a lot of #2 yellow corn.</li></ul>
-<p>Chapter 2 takes up “tokenization” as a software pattern — a pointer to an asset — and why that is not an invitation to buy anything.</p>
-<h2>5. What to look for as an operator</h2>
-<p>If you are evaluating a traceability pitch, ask:</p>
-<ul><li>Does it speak GS1 / EPCIS (or the equivalent in my crop) or a private dialect?</li><li>Who is allowed to write an event? Who can correct a mistake?</li><li>What happens at commingle / blend / identity-preserved switch?</li><li>Who pays for the sensors, the staff, and the exceptions?</li><li>If the vendor disappeared tomorrow, can I export the history?</li></ul>
-<p>Those questions are more valuable than a logo on a map.</p>
-<h2>Further reading (starting points, not endorsements)</h2>
-<ul><li>GS1, <i>EPCIS and Core Business Vocabulary</i> (standard, not a product).</li><li>USDA Agricultural Marketing Service — identity-preserved and organic audit programs (program rules change; check current).</li><li>FAO publications on food-chain traceability.</li></ul>
-<p>---</p>
-<p><i>Chapter 2 (not yet drafted): Tokenized farm assets as education, not an offering.</i></p>
-<hr>
-<h1>Chapter 2 — Tokenized farm assets (education, not an offering)</h1>
-<p><b>DRAFT for Mike review. Do not publish or sell until facts are approved.</b>   Not financial, legal, or investment advice. Not an offer of any security, commodity, or token.</p>
-<p>---</p>
-<p>“Tokenize the harvest” is a software sentence that got mixed up with a trading sentence. This chapter is only the software sentence.</p>
-<h2>1. What a token is, in this context</h2>
-<p>In a database you already have a row: lot ID, quantity, grade, owner, warehouse. A <b>token</b> is that row with two extra properties:</p>
-<p>1. It can be <b>moved</b> between parties with a signed instruction. 2. The move is <b>visible</b> to whoever is allowed to see the ledger.</p>
-<p>That is it. It is a pointer to an asset plus a transfer rule. It is not automatically a coin you buy on an exchange. It is not automatically a security. Those are legal questions for counsel and for the facts of a specific deal — not for a $20 education guide.</p>
-<h2>2. Three objects people conflate</h2>
-<table><tr><td>Object</td><td>Example</td><td>What moves</td></tr><tr><td>Inventory record</td><td>5,000 bu #2 yellow corn, bin 4</td><td>Nothing, unless you also ship or title-transfer</td></tr><tr><td>Warehouse receipt / invoice</td><td>“Pay us for lot X”</td><td>A claim, often off-chain in a bank</td></tr><tr><td>Public token with a ticker</td><td>A listed coin</td><td>A tradable instrument — <b>out of scope here</b></td></tr></table>
-<p>If a slide uses the third row to sell you the first row, walk away from the slide. Keep the inventory problem.</p>
-<h2>3. What people actually tokenize (when they mean it)</h2>
-<ul><li><b>A lot</b> — identity-preserved specialty grain, a carbon project vintage, a seed lot.</li><li><b>A claim on a lot</b> — a warehouse receipt, an offtake invoice, a carbon credit once a registry has issued it.</li><li><b>A machine hour or data stream</b> — rarer; still just a row with a transfer rule.</li></ul>
-<p>The hard part is not minting. The hard part is <b>binding</b> the token to something a scale, a lab, or a registry will still recognize after commingle, after a grade change, after a dispute.</p>
-<p>Chapter 1’s four pieces still apply: identity, events, attester, lookup. A token with no attester is a nickname.</p>
-<h2>4. Title vs. data</h2>
-<p>Digitizing a ticket does not move legal title. Title still follows whatever your state, your contract, and the warehouse receipt statute say. A ledger can <i>record</i> a title transfer. It does not replace the UCC filing, the cash grain contract, or the elevator’s books unless those systems agree.</p>
-<p>If someone tells you “the chain is the title,” ask which lawyer signed that.</p>
-<h2>5. Operator questions</h2>
-<ul><li>What real-world object does this token point at after blending?</li><li>Who is allowed to mint, burn, or correct?</li><li>What happens if the warehouse and the ledger disagree?</li><li>Can I export the history if I leave the vendor?</li></ul>
-<p>Those are the same questions as chapter 1. Tokenization does not retire them.</p>
-<p>---</p>
-<p><i>Chapter 3: How yield and input models actually work — and what they are not allowed to claim here.</i></p>
-<hr>
-<h1>Chapter 3 — AI yield and input prediction</h1>
-<p><b>DRAFT for Mike review. Do not publish or sell until facts are approved.</b>   Not financial, legal, or investment advice. This chapter does not forecast any farm, crop year, or price.</p>
-<p>---</p>
-<p>Yield models are not oracles. They are functions: weather, soil, imagery, and last year’s records in; a distribution out. Treat the output as a <b>range with a date</b>, not a number you bet the operating line on.</p>
-<h2>1. What goes in</h2>
-<p>Typical inputs (names, not a shopping list):</p>
-<ul><li>Weather (station, radar, reanalysis)</li><li>Remote sensing indices (greenness, moisture proxies) — <b>schematic pixels, not a photo of your neighbor’s quarter</b></li><li>Farm records: planting date, hybrid/variety, fertilizer, irrigation</li><li>Soil maps and prior yield monitors</li></ul>
-<p>If any of those is missing, the model is guessing with a costume on.</p>
-<h2>2. What comes out</h2>
-<p>A serious tool gives:</p>
-<ul><li>A <b>central estimate</b> and a <b>spread</b> (uncertainty)</li><li>The <b>as-of date</b> of the weather and imagery</li><li>A note when the field left the training distribution (flood, hail, a hybrid the model has never seen)</li></ul>
-<p>A dashboard that shows one confident bushels-per-acre figure with no date and no range is a poster, not a model.</p>
-<h2>3. What this guide will not do</h2>
-<ul><li>Quote a vendor’s “X% accuracy” as a fact</li><li>Predict your yield, your county, or next year’s price</li><li>Tell you to buy or sell anything</li></ul>
-<p>Accuracy claims belong in a peer-reviewed methods section or a contract with a defined test set. They do not belong in a caption.</p>
-<h2>4. How AI actually helps at the desk</h2>
-<ul><li><b>Nowcasting</b> — filling gaps between scouting trips</li><li><b>Exception lists</b> — which fields drifted from the rest of the farm</li><li><b>Input timing</b> — not “pour more N,” but “this window looks wetter than last Tuesday”</li></ul>
-<p>The agronomist and the yield monitor still close the loop. A model that never sees harvest data does not learn.</p>
-<h2>5. Operator questions</h2>
-<ul><li>What is the training geography and the year range?</li><li>How is uncertainty shown?</li><li>Who owns the farm data if I stop paying?</li><li>Can I compare the model to my own monitor at season end?</li></ul>
-<p>If those answers are vague, keep the spreadsheet.</p>
-<p>---</p>
-<p><i>Chapter 4: Smart contracts for insurance and offtake — triggers, oracles, and the paperwork that remains.</i></p>
-<hr>
-<h1>Chapter 4 — Smart contracts for insurance and offtake</h1>
-<p><b>DRAFT for Mike review. Do not publish or sell until facts are approved.</b>   Not financial, legal, or investment advice. Not a recommendation of any insurer or exchange.</p>
-<p>---</p>
-<p>A smart contract is a <b>script that waits for a condition and then moves a record or a payment instruction</b>. In agriculture the interesting conditions are boring: rainfall below a threshold, delivery accepted at a grade, a lab file posted.</p>
-<h2>1. Parametric vs. indemnity</h2>
-<ul><li><b>Indemnity</b> — someone adjusts a loss (adjuster, photos, claims file). Slow, familiar, argument-prone.</li><li><b>Parametric</b> — a published index hits a trigger (rainfall at a station, area-yield). Fast, basis risk: your field can drown while the station two townships over is fine.</li></ul>
-<p>Smart contracts are a natural fit for <b>parametric</b> products because the trigger is already a number. They do not magically settle a smashed bin without an attester.</p>
-<h2>2. The oracle problem, in one paragraph</h2>
-<p>The script cannot smell the field. Something has to <b>tell it</b> the rainfall, the grade, the delivery. That something is an <b>oracle</b>: a weather feed, a warehouse API, a lab. If the oracle is wrong or late, the script is perfectly, automatically wrong.</p>
-<p>Ask who operates the oracle, who can halt it, and what happens when the feed and the farm disagree.</p>
-<h2>3. Offtake</h2>
-<p>A grain offtake contract is already a smart-ish document: quantity, quality, window, price formula, rejection rules. Putting it “on-chain” only helps if:</p>
-<ul><li>Delivery events are posted by someone both sides trust (chapter 1),</li><li>Payment rails (ACH, the buyer’s AP) actually listen to the script,</li><li>Basis, grades, and washouts still have a human path.</li></ul>
-<p>Otherwise you have a PDF with extra steps.</p>
-<h2>4. Who still does the paperwork</h2>
-<p>Licensing, surplus-lines rules, crop-insurance MPCI vs. private parametric, warehouse receipts, cash contracts — none of that disappears because a script ran. The script is a clerk. The clerk is not the commissioner of insurance.</p>
-<h2>5. Operator questions</h2>
-<ul><li>What is the exact trigger, station, and window?</li><li>What is the basis risk in plain language?</li><li>Who can pause payouts?</li><li>Does my bank or my buyer’s AP actually accept this instruction?</li></ul>
-<p>---</p>
-<p><i>Chapter 5: Carbon and environmental credit rails — registries, additionality, and retirement vs. marketing.</i></p>
-<hr>
-<h1>Chapter 5 — Carbon and environmental credit rails</h1>
-<p><b>DRAFT for Mike review. Do not publish or sell until facts are approved.</b>   Not financial, legal, or investment advice. Not a recommendation to buy, sell, or originate credits.</p>
-<p>---</p>
-<p>A carbon credit is a <b>claim that a tonne of CO₂e was reduced or removed under a protocol, issued by a registry, and not counted twice</b>. The rail is the plumbing: measure, issue, transfer, retire.</p>
-<h2>1. The stack (names, not endorsements)</h2>
-<ul><li><b>Protocol</b> — the rules (what counts, how long, leakage).</li><li><b>Project</b> — a farm practice, a methane cover, a forestry stand.</li><li><b>Registry</b> — the book that issues serials and records retirement (Verra, ACR, Gold Standard, and others exist; look up current lists, do not treat this sentence as a catalog).</li><li><b>Buyer</b> — a company with a claim, or a trader. Different jobs.</li></ul>
-<p>On-chain retirement means: the serial is marked used on a ledger the public can check. It does <b>not</b> mean the soil carbon is real. Reality still sits in the protocol, the sample, and the audit.</p>
-<h2>2. Additionality, in one line</h2>
-<p>Would this have happened anyway? If yes, it is not additional, and a serious buyer will not pay you as if it were. That fight is older than blockchain.</p>
-<h2>3. Measurement is the bottleneck</h2>
-<p>Soil carbon moves slowly and noisily. Livestock methane needs devices. Avoided fertilizer is an accounting argument. AI and satellites can <b>narrow</b> sampling. They cannot replace a protocol’s required plots because a model looked confident.</p>
-<p>If a vendor sells “MRV in an app” with no protocol and no registry path, it is a dashboard.</p>
-<h2>4. Retirement vs. marketing</h2>
-<ul><li><b>Issued</b> — exists as a serial.</li><li><b>Transferred</b> — someone else holds it.</li><li><b>Retired</b> — used against a claim; should not be sold again.</li></ul>
-<p>A tweet that says “we offset” without a retirement serial is marketing. A serial without a matching practice on the farm is also marketing, just more expensive.</p>
-<h2>5. Operator questions</h2>
-<ul><li>Which protocol and registry, today?</li><li>Who pays for sampling and buffer pools?</li><li>Who owns the data and the serials if I leave?</li><li>Can a buyer see retirement without calling you?</li></ul>
-<p>---</p>
-<p><i>Chapter 6: Where commercial value actually shows up — buyers, auditors, lenders, mandates. Not tickers.</i></p>
-<hr>
-<h1>Chapter 6 — Where commercial value actually shows up</h1>
-<p><b>DRAFT for Mike review. Do not publish or sell until facts are approved.</b>   Not financial, legal, or investment advice. Markets and contracts, not tickers.</p>
-<p>---</p>
-<p>If you strip the slides, the money in this stack shows up in <b>friction someone already pays</b>:</p>
-<h2>1. Buyers and CPG mandates</h2>
-<p>Retail and food brands are being asked where ingredients came from. They pay for <b>fewer surprises</b>: recalls that stop at a lot, ESG questionnaires that do not take six weeks, identity-preserved premiums that survive an audit. That is chapter 1 sold to a procurement desk.</p>
-<h2>2. Auditors and certifiers</h2>
-<p>Organic, identity-preserved, export phytosanitary, customer quality manuals — someone is already walking the paper. A trail that exports cleanly is cheaper than a war room of PDFs. They will not pay extra for a token. They will pay to <b>not fail the audit</b>.</p>
-<h2>3. Lenders and crop insurance</h2>
-<p>Operating lines and MPCI care about acres, production history, and liens. A cleaner yield history and a cleaner warehouse position can <b>shorten a conversation</b>. They will not underwrite a public coin. Do not pitch them one.</p>
-<h2>4. Insurers (private parametric)</h2>
-<p>Basis risk and oracle quality (chapter 4). Value is <b>speed and a defined trigger</b>, not a new asset class.</p>
-<h2>5. What is not a customer in this guide</h2>
-<ul><li>Telegram rooms</li><li>“Farm token” listings</li><li>Anyone who leads with a price chart</li></ul>
-<p>If the buyer cannot name the lot, the event, the attester, and the lookup, they are not buying the thing this book is about.</p>
-<h2>6. A small operating map</h2>
-<p>1. Fix identity and events (ch. 1). 2. Only then decide if a transferrable record helps (ch. 2). 3. Use models as ranges with dates (ch. 3). 4. Put scripts on triggers you already trust (ch. 4). 5. Stay on a real registry if you sell environmental claims (ch. 5). 6. Sell to the desk that already has the pain (this chapter).</p>
-<p>That is the whole product. It is not a revolution. It is a filing system with better clocks.</p>
-<p>---</p>
-<p><i>End of draft body. See <font face='Courier'>GLOSSARY.md</font> and <font face='Courier'>HOW_TO_READ.md</font>.</i></p>
-<hr>
-<h1>Glossary (draft)</h1>
-<table><tr><td>Term</td><td>Meaning in this guide</td></tr><tr><td>Lot</td><td>A specific quantity with an ID — not “wheat in general.”</td></tr><tr><td>SKU</td><td>Retail/product code. Often many lots sit behind one SKU.</td></tr><tr><td>Event</td><td>Something that happened to a lot (harvest, blend, ship, test).</td></tr><tr><td>Attester</td><td>Who claims the event is true (elevator, lab, warehouse).</td></tr><tr><td>Ledger</td><td>A shared record of events. May be a database or a chain.</td></tr><tr><td>Token</td><td>A transferable pointer to a record. Not automatically a listed coin.</td></tr><tr><td>Node</td><td>A participant or a machine that writes or reads the ledger.</td></tr><tr><td>Oracle</td><td>A feed that tells a script a real-world number (rain, grade).</td></tr><tr><td>Parametric</td><td>Payout on an index/trigger, not a full loss adjustment.</td></tr><tr><td>Registry</td><td>The book that issues and retires environmental credit serials.</td></tr><tr><td>Retirement</td><td>Marking a credit serial used so it should not be sold again.</td></tr><tr><td>Commingled</td><td>Mixed in a bin; identity of the inbound truck is lost unless IP.</td></tr><tr><td>Identity-preserved (IP)</td><td>Kept separate so the inbound identity survives.</td></tr><tr><td>GS1 / EPCIS</td><td>Common language for IDs and supply-chain events.</td></tr></table>
-<hr>
-</article></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The guide — AgriConvergenceAi</title>
+  <meta name="description" content="What’s inside the $20 AgriConvergenceAi briefing: six short chapters on agricultural records, models, and contracts.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="index.html">
+        <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true">
+          <rect width="36" height="36" rx="4" fill="#3D6B4F"/>
+          <path d="M8 24h6M8 18h12M8 12h4" stroke="#F4EFE4" stroke-width="1.6" fill="none"/>
+          <circle cx="24" cy="12" r="3" fill="#C4A35A"/>
+          <path d="M24 15v9M21 24h6" stroke="#C4A35A" stroke-width="1.6" fill="none"/>
+        </svg>
+        <div>
+          <strong>AgriConvergenceAi</strong>
+          <span>Education in agriculture and digital records</span>
+        </div>
+      </a>
+      <nav>
+        <a href="guide.html">The guide</a>
+        <a href="https://www.instagram.com/agricovergenceai/">Instagram</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </header>
+
+    <article class="page">
+      <p class="kicker">Digital briefing · $20</p>
+      <h1>What’s in the guide</h1>
+      <p class="lede">
+        Six short chapters on how digital trails, records, and models show up in agriculture.
+        Written for people who work around grain, farm-tech, and food supply records.
+        It explains mechanisms. It does not tell you to buy, sell, or originate anything.
+      </p>
+
+      <ol class="chapters">
+        <li>
+          <h2>Traceability and provenance</h2>
+          <p>What a lot identity, an event, an attester, and a lookup actually are — and why commingled grain breaks map-pin stories.</p>
+        </li>
+        <li>
+          <h2>Farm-asset records, not tickers</h2>
+          <p>How a transferable record differs from a listed coin, and why title still lives in contracts and warehouse books.</p>
+        </li>
+        <li>
+          <h2>Yield and input models</h2>
+          <p>Treat a model as a range with a date. What belongs in a tool, and what does not belong in a caption.</p>
+        </li>
+        <li>
+          <h2>Insurance and offtake scripts</h2>
+          <p>Parametric triggers, oracles, and the paperwork that remains after a script runs.</p>
+        </li>
+        <li>
+          <h2>Carbon and environmental rails</h2>
+          <p>Protocols, registries, retirement serials — and why a confident app is not a credit.</p>
+        </li>
+        <li>
+          <h2>Where commercial value shows up</h2>
+          <p>Buyers, auditors, lenders, and insurers. Friction someone already pays — not a new asset class.</p>
+        </li>
+      </ol>
+
+      <p>
+        Follow
+        <a href="https://www.instagram.com/agricovergenceai/">@agricovergenceai</a>
+        for release notes, or email
+        <a href="mailto:info@andessalegacyholdings.com">info@andessalegacyholdings.com</a>
+        about the briefing.
+      </p>
+      <p class="fine">
+        Not financial, legal, tax, insurance, or investment advice.
+        Not an offer of any security, commodity, or token.
+      </p>
+    </article>
+  </div>
+
+  <footer>
+    <div class="wrap">
+      AgriConvergenceAi is an education brand of Andessa Legacy Holdings LLC,
+      30 N Gould St Ste N, Sheridan, WY 82801.
+      · <a href="mailto:info@andessalegacyholdings.com">info@andessalegacyholdings.com</a>
+      · (307) 410-3780
+      · <a href="privacy.html">Privacy</a>
+      · <a href="terms.html">Terms</a>
+      <div class="legal">Educational material only.</div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -67,6 +67,12 @@ h1 {
   border-radius: 2px;
 }
 .cta:hover { background: var(--circuit); }
+.cta.ghost {
+  background: transparent;
+  color: var(--leaf);
+  border: 1px solid var(--leaf);
+  margin-left: 0.5rem;
+}
 .cta-note {
   display: block;
   margin-top: 0.55rem;
@@ -117,46 +123,39 @@ footer a { color: var(--soil); }
 
 .page { padding: 2.4rem 0 3rem; max-width: 42rem; }
 .page h1 { font-size: 2rem; }
-
-.cta.ghost {
-  background: transparent;
-  color: var(--leaf);
-  border: 1px solid var(--leaf);
-  margin-left: 0.5rem;
-}
-
-.prose { max-width: 42rem; padding: 2rem 0 4rem; }
-.prose h1 { font-size: 2rem; }
-.prose h2 { font-size: 1.25rem; margin-top: 1.8rem; }
-.prose table { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin: 1rem 0; }
-.prose th, .prose td { border: 1px solid #ddd4c4; padding: 0.4rem 0.5rem; text-align: left; vertical-align: top; }
-.prose .draft { font-family: system-ui, sans-serif; font-size: 0.8rem; color: var(--circuit); }
-
-body.dash {
-  background: #12180f;
-  color: #e8e4d8;
+.page h2 { font-size: 1.15rem; margin: 1.6rem 0 0.4rem; }
+.page .lede { margin-bottom: 1.2rem; }
+.fine {
   font-family: system-ui, sans-serif;
+  font-size: 0.82rem;
+  color: var(--muted);
 }
-body.dash a { color: #c4a35a; }
-.dash-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 0.9rem;
-  padding: 1.4rem 0 2.5rem;
+
+.chapters {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+  counter-reset: ch;
 }
-.dash-card {
-  background: #1c2418;
-  border: 1px solid #2a6f6f55;
-  padding: 1rem 1.1rem 1.15rem;
-  border-radius: 4px;
+.chapters li {
+  counter-increment: ch;
+  background: #fffdf8;
+  border: 1px solid color-mix(in srgb, var(--soil) 18%, transparent);
+  padding: 1rem 1.1rem 1.1rem;
+  margin: 0 0 0.7rem;
 }
-.dash-card h2 { font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: #2a6f6f; margin: 0 0 0.45rem; font-weight: 600; }
-.dash-card .stat { font-size: 1.35rem; color: #c4a35a; margin: 0 0 0.35rem; }
-.dash-card p { margin: 0; font-size: 0.85rem; color: #b7b3a6; line-height: 1.45; }
-.pill { display: inline-block; font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.15rem 0.4rem; border: 1px solid #3d6b4f; color: #9dceaf; margin-bottom: 0.5rem; }
-.pill.wait { border-color: #c4a35a; color: #c4a35a; }
-.pill.off { border-color: #5a6354; color: #5a6354; }
-.future { opacity: 0.55; }
+.chapters h2 {
+  font-size: 1.05rem;
+  margin: 0 0 0.35rem;
+}
+.chapters h2::before {
+  content: counter(ch, decimal-leading-zero) "  ";
+  font-family: system-ui, sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  color: var(--wheat);
+}
+.chapters p { margin: 0; color: var(--muted); font-size: 0.95rem; }
 
 @media (max-width: 720px) {
   .grid { grid-template-columns: 1fr; }

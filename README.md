@@ -1,2 +1,5 @@
-# agriconvergence-ai
-Public site for AgriConvergenceAi (Andessa Legacy Holdings LLC education brand)
+# AgriConvergenceAi
+
+Public education site for agriconvergenceai.com.
+
+Do not publish operator notes, draft watermarks, or `dashboard.html` here.
